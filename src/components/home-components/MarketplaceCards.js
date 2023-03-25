@@ -1,11 +1,12 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { SiGooglechat } from "react-icons/si";
 
 const MarketplaceCards = ({ Background, Size, Location, Owner, Price }) => {
 	return (
-		<div
+		<Link
 			id="card-container"
+			to="/marketplace/1"
 			className="flex flex-col flex-wrap transition duration-200 hover:scale-105 sm:flex-row md:flex-col"
 		>
 			<div className="w-full p-2 hover:cursor-pointer sm:w-1/2 md:min-w-full">
@@ -43,7 +44,7 @@ const MarketplaceCards = ({ Background, Size, Location, Owner, Price }) => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</Link>
 	);
 };
 
