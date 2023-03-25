@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import SpesefikasiTanah from "../components/SpesefikasiTanah";
 
 const home = () => {
   return (
@@ -8,7 +9,7 @@ const home = () => {
     //   <Navbar />
     //   <Footer />
     // </>
-    <div>halo</div>
+    <div><SpesefikasiTanah/></div>
   );
 };
 
