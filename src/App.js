@@ -10,6 +10,7 @@ function App() {
   return (
     <div className="App font-poppins">
       <Navbar />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/marketplace" element={<Marketplace />} />

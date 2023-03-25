@@ -1,14 +1,9 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Detailsi from "../components/Detailsi";
 
 const home = () => {
   return (
-    // <>
-    //   <Navbar />
-    //   <Footer />
-    // </>
-    <div>halo</div>
+    <Detailsi/>
   );
 };
 
