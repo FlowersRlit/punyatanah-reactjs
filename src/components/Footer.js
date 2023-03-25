@@ -20,24 +20,25 @@ const Footer = () => {
         {/* facebook */}
         <div className="flex justify-center">
           <FooterSvgFill
-            Icon={<ImFacebook Link="https://id-id.facebook.com" />}
+            Icon={<ImFacebook />}
+            Redirect="https://www.facebook.com"
           />
           {/* twitter */}
-          <FooterSvgFill Icon={<ImTwitter />} Link="https://twitter.com" />
+          <FooterSvgFill Icon={<ImTwitter />} Redirect="https://twitter.com" />
           {/* instagram */}
           <FooterSvgFill
             Icon={<BsInstagram />}
-            Link="https://www.instagram.com/"
+            Redirect="https://www.instagram.com/"
           />
           {/* linkedin */}
           <FooterSvgFill
             Icon={<ImLinkedin2 />}
-            Link="https://www.linkedin.com"
+            Redirect="https://www.linkedin.com"
           />
           {/* github */}
           <FooterSvgFill
             Icon={<BsGithub />}
-            Link="https://github.com/FlowersRlit/punyatanah-reactjs"
+            Redirect="https://github.com/FlowersRlit/punyatanah-reactjs"
           />
         </div>
       </div>
