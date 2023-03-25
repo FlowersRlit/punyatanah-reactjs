@@ -12,9 +12,13 @@ export default function CardMarketplace(props){
         
             <div className="flex flex-col justify-between h-full col-span-3"> 
                 <div className="px-4 pt-2">
-                    <h4 className="font-semibold text-lg sm:text-2xl text-orange1">
-                        {props.item.LuasTanah} m²
+                    <div>
+                        <h4 className="font-semibold text-lg sm:text-2xl text-orange1">
+                            {props.item.LuasTanah} m²
                         </h4>
+                        
+                    </div>
+                    
                     <h4 className="font-medium text-lg sm:text-xl">Rp {props.item.Harga.toLocaleString(
                         ["ban", "id"]
                     )}</h4>
