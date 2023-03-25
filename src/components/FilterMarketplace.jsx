@@ -81,16 +81,26 @@ export default function FilterMarketplace(){
                 </div>
               </div>
 
-              <div className="mt-4" >
-                <h3 className="text-xl font-medium text-white">Harga (Rp):</h3>
-                <div>
-                  <label className="block text-white" htmlFor="minimum">Minimum</label>
-                  <input type="number" className="text-sm w-full px-4 py-2 mt-2 rounded-md transition ease-in-out focus:ring-2 focus:ring-offset-2 focus:ring-sky-600" />
+              <div className="mt-4 w-full">
+                <h3 className="text-xl font-medium text-white">Harga(Jt):</h3>
+                <div className="form-control">
+                    <label className="label">
+                        <span className="label-text text-sm text-white">Minimum</span>
+                    </label>
+                    <label className="input-group">
+                        <span className="">Rp.</span>
+                        <input type="number" placeholder="0" className="input input-bordered w-full" />
+                    </label>
                 </div>
     
-                <div>
-                  <label className="block text-white" htmlFor="maximum">Maximum</label>
-                  <input type="number" className="text-sm w-full px-4 py-2 mt-2 rounded-md transition ease-in-out focus:ring-2 focus:ring-offset-2 focus:ring-sky-600" />
+                <div className="form-control">
+                    <label className="label">
+                        <span className="label-text text-sm text-white">Maximum</span>
+                    </label>
+                    <label className="input-group">
+                    <span className="">Rp.</span>
+                        <input type="number" placeholder="10000" className="input input-bordered w-full"/>
+                    </label>
                 </div>
               </div>
 

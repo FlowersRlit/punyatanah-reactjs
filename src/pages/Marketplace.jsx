@@ -17,7 +17,7 @@ export default function Marketplace(){
         {
           data.Data.map((item, i) => {
             return (
-              <CardMarketplace item={item} i={i}/>
+              <CardMarketplace item={item} key={i}/>
             )
           })
         }
@@ -28,7 +28,7 @@ export default function Marketplace(){
           new Array(5).fill(1).map((x, i) => {
             console.log(i);
             return (
-              <button className={`btn border-white ${currPage === i+1 ? 'bg-hijau1' : 'bg-gray1'}`} key={i + 1}>{i + 1}</button>
+              <button className={`btn border-white ${currPage === i+1 ? 'bg-hijau1' : 'bg-gray1'}`} key={i}>{i + 1}</button>
             )
           })
         }

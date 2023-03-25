@@ -2,7 +2,7 @@ import Tags from "./Tags";
 
 export default function CardMarketplace(props){
     return(
-        <div className="p-1 w-full hover:scale-105 cursor-pointer h-full" key={props.i}>
+        <div className="p-1 w-full hover:scale-105 cursor-pointer h-full">
           <div className="grid grid-cols-4 justify-between 
           rounded-lg shadow-lg overflow-hidden border bg-white h-full">
             <div className='span-1 overflow-hidden'>
@@ -31,7 +31,7 @@ export default function CardMarketplace(props){
                     {
                         props.item.Tags.map((x, i) => {
                             return(
-                                <Tags tag={x} i={i}/>
+                                <Tags tag={x} key={i}/>
                             )
                         })
                     }
