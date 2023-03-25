@@ -1,3 +1,4 @@
+import Tags from "./Tags";
 
 export default function CardMarketplace(props){
     return(
@@ -10,16 +11,26 @@ export default function CardMarketplace(props){
             </div>    
         
             <div className="flex flex-col justify-between h-full col-span-3"> 
-                <div className="p-4">
+                <div className="px-4 pt-2">
                     <h4 className="font-semibold text-lg sm:text-2xl text-orange1">
                         {props.item.LuasTanah} m²
                         </h4>
                     <h4 className="font-medium text-lg sm:text-xl">Rp {props.item.Harga.toLocaleString(
                         ["ban", "id"]
                     )}</h4>
-                    <h4 className="font-base text-base text-gray1">
+                    <h4 className="font-base text-sm text-gray1">
                         {props.item.Kecamatan}, {props.item.Kota}
                     </h4>
+                </div>
+
+                <div className="flex px-3 mb-4">
+                    {
+                        props.item.Tags.map((x, i) => {
+                            return(
+                                <Tags tag={x} i={i}/>
+                            )
+                        })
+                    }
                 </div>
 
                 <div>
