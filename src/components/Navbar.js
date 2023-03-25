@@ -11,7 +11,7 @@ const Navbar = () => {
 	};
 
 	return (
-		<div className="bg-white">
+		<div className="bg-white border shadow-xl">
 			<div className="mx-auto max-w-6xl px-4">
 				<div className="flex justify-between">
 					<div className="flex space-x-4">
