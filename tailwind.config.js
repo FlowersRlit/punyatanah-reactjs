@@ -12,6 +12,10 @@ module.exports = {
         black1: "#212121",
         gray1: "#999999",
       },
+      container: {
+        center: true,
+        padding: "1rem",
+      },
     },
   },
   plugins: [require("daisyui")],
