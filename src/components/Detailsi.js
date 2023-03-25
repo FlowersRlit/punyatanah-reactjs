@@ -1,11 +1,11 @@
 import React from "react";
-import tpakarto from "./../assets/tpakarto.jpg";
 import Comendetails from "./childdetails/Comendetails";
 import Deksripsit from "./childdetails/Deksripsit";
 import Pckategori from "./childdetails/Pckategori";
 import Pictdetails from "./childdetails/Pictdetails";
 import Ratingdetails from "./childdetails/Ratingdetails";
 import Upjdetails from "./childdetails/Upjdetails";
+import SpesefikasiTanah from "./childdetails/SpesefikasiTanah";
 const Detailsi = () => {
   return (
     <>
@@ -25,6 +25,9 @@ const Detailsi = () => {
       </div>
       <div>
         <Deksripsit/>
+      </div>
+      <div>
+        <SpesefikasiTanah/>
       </div>
       <div className="pl-8 w-full border-b pb-20">
         <Upjdetails/>

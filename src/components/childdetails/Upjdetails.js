@@ -2,6 +2,8 @@ import React from 'react'
 import upt1 from './../../assets/upt1.png'
 const Upjdetails = () => {
   return (
+    <>
+        <div className='text-2xl font-semibold text-hijau1 underline underline-offset-2 pb-6 '>PENJUAL TANAH</div>
     <div className='flex rounded-lg bg-hijau1 w-full items-center'>
         <img src={upt1} className=" px-4 h-full"/>
         <div className='flex items-center justify-between flex-1 pr-14'>
@@ -17,6 +19,8 @@ const Upjdetails = () => {
         </div>
 
     </div>
+    </>
+
   )
 }
 

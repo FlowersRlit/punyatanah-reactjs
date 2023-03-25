@@ -3,7 +3,7 @@ import React from 'react'
 const Deksripsit = () => {
   return (
     <div className='py-8'>
-        <h1 className='text-hijau1 text-2xl px-8 underline underline-offset-8 font-bold'>
+        <h1 className='text-hijau1 text-2xl px-8 underline underline-offset-8 font-semibold'>
             Deskripsi tanah
         </h1>
         <p className='px-12 pt-4'>
