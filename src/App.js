@@ -5,23 +5,22 @@ import Register from "./pages/Register";
 import Marketplace from "./pages/Marketplace";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import SpesefikasiTanah from "./components/SpesefikasiTanah";
-import Detailsi from "./components/Detailsi";
+import DetailsItem from "./pages/DetailsItem";
 
 function App() {
-	return (
-		<div className="App bg-white font-poppins">
-			<Navbar />
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/marketplace" element={<Marketplace />} />
-				<Route path="/marketplace/:id" element={<Detailsi />} />
-				<Route path="/login" element={<LogIn />} />
-				<Route path="/register" element={<Register />} />
-			</Routes>
-			<Footer />
-		</div>
-	);
+  return (
+    <div className="App bg-white font-poppins">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/marketplace" element={<Marketplace />} />
+        <Route path="/marketplace/:id" element={<DetailsItem />} />
+        <Route path="/login" element={<LogIn />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
