@@ -1,0 +1,27 @@
+import React from 'react'
+import upt1 from './../../assets/upt1.png'
+const Upjdetails = () => {
+  return (
+    <>
+        <div className='text-2xl font-semibold text-hijau1 underline underline-offset-2 pb-6 '>PENJUAL TANAH</div>
+    <div className='flex rounded-lg bg-hijau1 w-full items-center'>
+        <img src={upt1} className=" px-4 h-full"/>
+        <div className='flex items-center justify-between flex-1 pr-14'>
+          <h1 className='text-white p-4 pt-4'>
+              NAMA Penjual (nantinya Array..)
+              <p className='bg-orange1 w-28 text-center rounded-lg'>LEAN MORE...</p>
+          </h1>
+
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-16 h-16 text-white">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
+          </svg>
+
+        </div>
+
+    </div>
+    </>
+
+  )
+}
+
+export default Upjdetails

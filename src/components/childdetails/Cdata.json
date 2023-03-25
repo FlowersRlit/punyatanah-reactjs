@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1 ,
+        "judul" : "karto",
+        "gambar" : "/img/t1.jpg"
+    
+    },
+    {
+        "id": 2 ,
+        "judul" : "Darminah",
+        "gambar" : "/img/t2.jpg"
+    
+    },
+    {
+        "id": 3 ,
+        "judul" : "Budiman",
+        "gambar" : "/img/t3.jpg"
+    
+    },
+    {
+        "id": 4 ,
+        "judul" : "Chika",
+        "gambar" : "/img/t4.jpg"
+    
+    },
+    {
+        "id": 5 ,
+        "judul" : "Robert",
+        "gambar" : "/img/t5.jpg"
+    
+    },
+    {
+        "id": 6 ,
+        "judul" : "Sulaiman",
+        "gambar" : "/img/t6.jpg"
+    
+    }
+]
