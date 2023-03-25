@@ -1,14 +1,13 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Headline from "../components/home-components/Headline";
+import MarketplacePreview from "../components/home-components/MarketplacePreview";
 
 const Home = () => {
   return (
-    // <>
-    //   <Navbar />
-    //   <Footer />
-    // </>
-    <div>halo</div>
+    <>
+      <Headline />
+      <MarketplacePreview />
+    </>
   );
 };
 
