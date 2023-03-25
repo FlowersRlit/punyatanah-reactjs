@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-const home = () => {
+const Home = () => {
   return (
     // <>
     //   <Navbar />
@@ -12,4 +12,4 @@ const home = () => {
   );
 };
 
-export default home;
+export default Home;
