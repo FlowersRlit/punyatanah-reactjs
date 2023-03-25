@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="App font-poppins">
+    <div className="App bg-white font-poppins">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
