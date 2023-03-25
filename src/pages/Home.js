@@ -1,29 +1,14 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import SpesefikasiTanah from "../components/SpesefikasiTanah";
+import Headline from "../components/home-components/Headline";
+import MarketplacePreview from "../components/home-components/MarketplacePreview";
 
-const home = () => {
-<<<<<<< Updated upstream
-  return (
-    // <>
-    //   <Navbar />
-    //   <Footer />
-    // </>
-    <div><SpesefikasiTanah/></div>
-  );
-=======
+const Home = () => {
 	return (
-		// <>
-		//   <Navbar />
-		//   <Footer />
-		// </>
-		<div className="leading-[100px]">
-			aodfasdsadasdasdasdasdadadasdasdadadaodfasdsadasdasdasdasdadadasdasdadadaodfasdsadasdasdasdasdadadasdasdadad
-			aodfasdsadasdasdasdasdadadasdasdadad
-		</div>
+		<>
+			<Headline />
+			<MarketplacePreview />
+		</>
 	);
->>>>>>> Stashed changes
 };
 
-export default home;
+export default Home;
