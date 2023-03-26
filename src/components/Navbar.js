@@ -1,8 +1,8 @@
 import React from "react";
 import { useRef } from "react";
 import { NavLink } from "react-router-dom";
-import NavbarMidButtons from "./misc-components/NavbarMidButtons";
-import NavbarMobileButtons from "./misc-components/NavbarMobileButtons";
+import NavbarMidButtons from "./MiscComponents/NavbarMidButtons";
+import NavbarMobileButtons from "./MiscComponents/NavbarMobileButtons";
 import Logo from "../assets/navbar.svg";
 
 const Navbar = () => {

@@ -1,6 +1,6 @@
 import React from "react";
-import Headline from "../components/home-components/Headline";
-import MarketplacePreview from "../components/home-components/MarketplacePreview";
+import Headline from "../components/HomeComponents/Headline";
+import MarketplacePreview from "../components/HomeComponents/MarketplacePreview";
 
 const Home = () => {
 	return (

@@ -1,12 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import FooterMiddleCols from "./misc-components/FooterMiddleCols";
-import FooterForthCol from "./misc-components/FooterForthCol";
-import FooterColsTitle from "./misc-components/FooterColsTitle";
+import FooterMiddleCols from "./MiscComponents/FooterMiddleCols";
+import FooterForthCol from "./MiscComponents/FooterForthCol";
+import FooterColsTitle from "./MiscComponents/FooterColsTitle";
 import { BsFillHouseDoorFill, BsInstagram, BsGithub } from "react-icons/bs";
 import { HiMail, HiPrinter } from "react-icons/hi";
 import { ImPhone, ImFacebook, ImTwitter, ImLinkedin2 } from "react-icons/im";
-import FooterSvgFill from "./misc-components/FooterSvgFill";
+import FooterSvgFill from "./MiscComponents/FooterSvgFill";
 import Logo from "../assets/logopunyatanah.svg";
 
 const Footer = () => {
