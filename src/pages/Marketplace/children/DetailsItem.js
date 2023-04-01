@@ -1,12 +1,22 @@
-import React from "react";
-import Comment from "../components/ChildDetails/Comment";
-import Description from "../components/ChildDetails/Description";
-import SideRow from "../components/ChildDetails/SideRow";
-import PictureCarousel from "../components/ChildDetails/PictureCarousel";
-import Rating from "../components/ChildDetails/Rating";
-import OwnerCard from "../components/ChildDetails/OwnerCard";
-import SpesefikasiTanah from "../components/ChildDetails/SpesifikasiTanah";
+import React, { useEffect, useState } from "react";
+import Comment from "../../../components/ChildDetails/Comment";
+import Description from "../../../components/ChildDetails/Description";
+import SideRow from "../../../components/ChildDetails/SideRow";
+import PictureCarousel from "../../../components/ChildDetails/PictureCarousel";
+import Rating from "../../../components/ChildDetails/Rating";
+import OwnerCard from "../../../components/ChildDetails/OwnerCard";
+import SpesefikasiTanah from "../../../components/ChildDetails/SpesifikasiTanah";
+import data from "../../../data";
+import { useParams } from "react-router-dom";
+
 const DetailsItem = () => {
+  let { id } = useParams();
+  const [detail, setDetail] = useState({});
+
+  useEffect(() => {
+    console.log('id' + id);
+  }, [])
+
   return (
     <>
       <div className="container flex p-2 shadow ">

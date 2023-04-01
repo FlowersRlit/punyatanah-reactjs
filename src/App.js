@@ -4,7 +4,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import DetailsItem from "./pages/DetailsItem";
+import DetailsItem from "./pages/Marketplace/children/DetailsItem";
 import Marketplace from "./pages/Marketplace/Marketplace";
 
 function App() {
