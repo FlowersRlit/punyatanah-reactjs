@@ -15,7 +15,7 @@ const Navbar = () => {
 	return (
 		<div className="bg-white">
 			<div className="mx-auto max-w-6xl px-4">
-				<div className="flex justify-between">
+				<div className="grid grid-cols-2 md:grid-cols-4">
 					<div className="flex space-x-4">
 						<div>
 							{/* logo */}
@@ -26,7 +26,7 @@ const Navbar = () => {
 					</div>
 
 					{/* nav: middle buttons */}
-					<div className="hidden items-center space-x-1 font-medium md:flex">
+					<div className="hidden items-center space-x-1 font-medium md:flex col-span-2 justify-center">
 						<NavbarMidButtons Button="Home" Page="./" />
 						<NavbarMidButtons Button="Marketplace" Page="./marketplace" />
 						<NavbarMidButtons Button="Review" Page="./" />
@@ -34,7 +34,7 @@ const Navbar = () => {
 					</div>
 
 					{/* sign in & sign up */}
-					<div className="hidden items-center space-x-1 md:flex">
+					<div className="hidden items-center justify-end space-x-1 md:flex">
 						<NavLink
 							to="./login"
 							className="py-2 px-3 font-medium text-[#016450] hover:text-[#FF6500]"
@@ -50,7 +50,7 @@ const Navbar = () => {
 					</div>
 
 					{/* mobile responsive */}
-					<div className="flex items-center md:hidden">
+					<div className="flex items-center md:hidden justify-end">
 						<button onClick={handleClick} className="mobile-menu-button">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"

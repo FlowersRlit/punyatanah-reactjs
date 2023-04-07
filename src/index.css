@@ -3,5 +3,14 @@
 @tailwind utilities;
 
 *{
-    transition: 0.2s;
+    transition: 0.125s;
+}
+
+.step::before, .step::after{
+    @apply bg-gray1;
+}
+
+.select, .btn{
+    min-height: 2.5rem;
+    height: 2.5rem;
 }
