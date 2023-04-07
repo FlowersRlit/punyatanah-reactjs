@@ -31,12 +31,7 @@ export default function ProvinceForm(props){
 
     return(
         <div className="w-full flex flex-col items-center justify-center">
-            <Suspense fallback={<div>Loading...</div>}>
-                <div className='w-2/6 xl:px-4'>
-                    <Component chosenProv={props.chosenProv}/>
-                </div>
-            </Suspense>
-
+            
             <div className="w-full flex justify-center align-center mt-6">
                 <select className="select select-bordered border border-gray1 font-normal text-black col-span-3 w-4/6 md:w-2/6 mr-2" defaultValue={props.chosenProv !== '' ? props.chosenProv : "select"}
                 placeholder="Select"
@@ -59,6 +54,13 @@ export default function ProvinceForm(props){
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                 </button>
             </div>
+            
+            <Suspense fallback={<div>Loading...</div>}>
+                <div className='w-2/6 xl:px-4'>
+                    <Component chosenProv={props.chosenProv}/>
+                </div>
+            </Suspense>
+
         
 
 
