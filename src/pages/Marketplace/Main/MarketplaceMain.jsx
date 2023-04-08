@@ -1,7 +1,7 @@
-import MapOfId from "../../../components/MarketComponents/Map";
+
 import { useEffect, useState } from "react";
 import Stepper from "../../../components/MarketComponents/Stepper";
-import JawaBali from "../../../../src/assets/map-parts/JawaBali.svg"
+import { useTransition, animated, AnimatedProps, useSpringRef } from '@react-spring/web'
 import { useNavigate } from "react-router-dom";
 import PartForm from "../../../components/MarketComponents/FormPages/PartForm";
 import ProvinceForm from "../../../components/MarketComponents/FormPages/ProvinceForm";
@@ -42,6 +42,8 @@ function SearchBar(){
     )
 }
 
+
+
 export default function MarketplaceMain(){
     const navigate = useNavigate()
     // const [chosenProv, setChosenProv] = useState({
@@ -80,8 +82,34 @@ export default function MarketplaceMain(){
     //     'Papua': false
     // });
 
-    const [choosingState, setChoosingState] = useState(1); // 1-4
-        
+    const [choosingState, setChoosingState] = useState(1); // 1-3
+
+    const pages= [
+        ({ style }) => 
+        <animated.div style={{ ...style}} className="w-full">
+            <PartForm choosingState={choosingState} setChoosingState={setChoosingState} 
+            chosenPart={chosenPart} setChosenPart={setChosenPart}/>
+        </animated.div>,
+        ({ style }) => 
+        <animated.div style={{ ...style}} className="w-full">
+            <ProvinceForm setChoosingState={setChoosingState} 
+            chosenPart={chosenPart} chosenProv={chosenProv} setChosenProv={setChosenProv}/>
+        </animated.div>,
+        ({ style }) => 
+        <animated.div style={{ ...style}} className="w-full">
+            <DetailedForm />
+        </animated.div>,
+    ]
+    
+    const transRef = useSpringRef();
+    const transitions = useTransition((choosingState - 1) % 3, {
+      ref: transRef,
+      keys: null,
+      from: { opacity: 0 , x: 200},
+      enter: { opacity: 1 , x: 0},
+    //   leave: { opacity: 0 , x: -200},
+    });
+
     const [chosenPart, setChosenPart] = useState('');
     const [chosenProv, setChosenProv] = useState('');
 
@@ -96,10 +124,13 @@ export default function MarketplaceMain(){
     
     useEffect(()=> {
         console.log(choosingState);
+        transRef.start()
+
     }, [choosingState])
 
     return(
         <div className="container flex flex-col items-center min-h-screen">
+
             <div className="form-control w-full md:w-4/5 lg:w-3/5 xl:w-2/5 my-4">
                 <SearchBar />
             </div>
@@ -112,7 +143,14 @@ export default function MarketplaceMain(){
 
             <div className="w-full flex flex-col items-center">
                 <Stepper choosingState={choosingState} chosenPart={chosenPart} chosenProv={chosenProv} setChoosingState={setChoosingState}/>
-                {
+
+                <div className={`flex fill w-full`}>
+                {transitions((style, i) => {
+                    const Page = pages[i]
+                    return <Page style={style} />
+                })}
+                </div>
+                {/* {
                     choosingState === 1 ? 
                     <PartForm choosingState={choosingState} setChoosingState={setChoosingState} 
                     chosenPart={chosenPart} setChosenPart={setChosenPart}/> : ''
@@ -126,7 +164,7 @@ export default function MarketplaceMain(){
                 {
                     choosingState === 3 ?
                     <DetailedForm /> : ''
-                }
+                } */}
             </div>
         </div>
     )

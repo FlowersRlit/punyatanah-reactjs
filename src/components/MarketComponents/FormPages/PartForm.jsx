@@ -12,9 +12,15 @@ export default function PartForm(props){
 
     return(
         <div className="w-full flex flex-col items-center justify-center">
+
+            <br />
+
             <MapOfId
             chosenPart={props.chosenPart} setChosenPart={props.setChosenPart} 
             choosingState={props.choosingState} setChoosingState={props.setChoosingState} />
+
+            <br />
+
 
             <div className="w-full flex justify-center align-center mt-8">
                 <select className="select select-bordered border border-gray1 font-normal text-black col-span-3 w-8/12 md:w-2/6 mr-2" defaultValue={props.chosenPart}

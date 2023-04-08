@@ -1,5 +1,6 @@
 import { useState, useRef, lazy, Suspense, useEffect } from "react";
 import Alerts from "../../Alerts/Alert.jsx";
+import { useSpring, animated } from '@react-spring/web'
 
 const componentMapping = {
   Jawa: () => import('./Provinces/Jawa'),
@@ -14,6 +15,7 @@ const componentMapping = {
 export default function ProvinceForm(props){
     const [warning, setWarning] = useState(false);
     const Component = lazy(componentMapping[props.chosenPart]);
+
 
     useEffect(() => {
         console.log(props);
@@ -48,7 +50,9 @@ export default function ProvinceForm(props){
                 </select>
                 <button className="btn bg-orange1 text-white border border-gray1 border-l-0 hover:scale-105 hover:bg-orange1"
                 onClick={() => {
-                    if(props.chosenProv) props.setChoosingState(3)
+                    if(props.chosenProv) {
+                        props.setChoosingState(3)
+                    }
                     else setWarning(true);
                 }}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>

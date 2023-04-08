@@ -6,6 +6,10 @@
     transition: 0.125s;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 .step::before, .step::after{
     @apply bg-gray1;
 }
