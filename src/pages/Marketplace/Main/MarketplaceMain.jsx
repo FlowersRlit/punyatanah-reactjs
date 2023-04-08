@@ -111,7 +111,7 @@ export default function MarketplaceMain(){
             </div>
 
             <div className="w-full flex flex-col items-center">
-                <Stepper choosingState={choosingState} chosenPart={chosenPart} setChoosingState={setChoosingState}/>
+                <Stepper choosingState={choosingState} chosenPart={chosenPart} chosenProv={chosenProv} setChoosingState={setChoosingState}/>
                 {
                     choosingState === 1 ? 
                     <PartForm choosingState={choosingState} setChoosingState={setChoosingState} 

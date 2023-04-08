@@ -1,8 +1,11 @@
 
-import { Fragment } from "react";
+import { Fragment , useState } from "react";
+import Alerts from "../Alerts/Alert";
 
 export default function Stepper(props) {
     const instruksi = ['Pilih Lokasi', 'Pilih Provinsi', 'Penyaringan Detail'];
+    const [warning, setWarning] = useState(false);
+
     return(
         <div className="flex align-center justify-center">
             {
@@ -11,7 +14,9 @@ export default function Stepper(props) {
                         <div className="flex flex-col md:flex-row rounded-full items-center w-1/5 mx-1">
                             <button className={`rounded-full aspect-square w-10 h-10 grid place-items-center m-2 md:mx-4 ${i + 1 > props.choosingState ? 'bg-hijau1' : 'bg-orange1'}`}
                             onClick={() => {
-                                props.setChoosingState(i + 1);
+                                if(props.choosingState === 1 && (i + 1 === 2 || i + 1 === 3) && props.chosenPart === '') setWarning(true);
+                                else if(props.choosingState === 2 && (i + 1 === 3) && props.chosenProv === '') setWarning(true);
+                                else props.setChoosingState(i + 1);
                             }}>
                                 <h4 className="text-white font-medium">{ i + 1 }</h4>
                             </button>
@@ -30,6 +35,7 @@ export default function Stepper(props) {
                 })
             }
             
+            <Alerts visible={warning} setVisible={setWarning} message={'Pilih Satu Provinsi'} type={warning}/>
         </div>
     )
 }
