@@ -44,7 +44,7 @@ export default function PartForm(props){
                 </button>
             </div>
 
-            <Alerts visible={warning} setVisible={setWarning} message={'Pilih Satu Lokasi'} type={warning}/>
+            <Alerts visible={warning} setVisible={setWarning} message={'Pilih Satu Lokasi'} type={'warning'}/>
         </div>
     )
 }

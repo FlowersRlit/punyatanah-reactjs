@@ -68,7 +68,7 @@ export default function ProvinceForm(props){
         
 
 
-            <Alerts visible={warning} setVisible={setWarning} message={'Pilih Satu Provinsi'} type={warning}/>
+            <Alerts visible={warning} setVisible={setWarning} message={'Pilih Satu Provinsi'} type={'warning'}/>
 
         </div>
     )
