@@ -18,7 +18,7 @@ const Login = () => {
 
         <div className="grid grid-rows-2 md:grid-rows-1 md:grid-cols-12 md:my-8 items-center">
           <label className="md:col-span-3">
-            <span className="text-black1 text-sm font-medium">Your Email</span>
+            <span className="text-black1 text-sm md:text-base font-medium">Your Email</span>
           </label>
           <label className="md:col-span-7">
             <input type="text" placeholder="username@email.com" className="input input-bordered border-gray1 w-full" />
@@ -27,7 +27,7 @@ const Login = () => {
 
         <div className="grid grid-rows-2 md:grid-rows-1 md:grid-cols-12 md:my-8 items-center">
           <label className="md:col-span-3">
-            <span className="text-black1 text-sm font-medium">Password</span>
+            <span className="text-black1 text-sm md:text-base font-medium">Password</span>
           </label>
           <label className="md:col-span-7">
             <input type="password" placeholder="Password" className="input input-bordered border-gray1 w-full" />
