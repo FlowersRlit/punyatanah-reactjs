@@ -1,45 +1,55 @@
 import React from "react";
+import { useSpring, animated } from '@react-spring/web'
 
 const Login = () => {
-  return (
-    <div className="h-screen grid grid-cols-2 w-full relative px-16 py-32">
-      <div className="w-full ">
-        <h1 className="font-bold text-black1 text-4xl">Login</h1>
+  const anim = useSpring({
+    from: { opacity: 0 , y: 20},
+    to: { opacity: 1 , y: 0},
+    delay: 100
+  })
 
-        <div className="grid grid-cols-12 my-8 items-center">
-          <label className="col-span-3">
-            <span className="text-black1 font-medium">Your Email</span>
+  return (
+    <div className="grid grid-rows-2 md:grid-cols-2 w-full relative 
+    px-8 md:px-16 xl:px-32 
+    pt-8 md:pt-32 
+    pb-8 md:pb-0">
+      <div className="w-full ">
+        <h1 className="font-bold text-black1 text-3xl md:text-4xl">Login</h1>
+
+        <div className="grid grid-rows-2 md:grid-rows-1 md:grid-cols-12 md:my-8 items-center">
+          <label className="md:col-span-3">
+            <span className="text-black1 text-sm font-medium">Your Email</span>
           </label>
-          <label className="col-span-7">
+          <label className="md:col-span-7">
             <input type="text" placeholder="username@email.com" className="input input-bordered border-gray1 w-full" />
           </label>
         </div>
 
-        <div className="grid grid-cols-12 my-8 items-center">
-          <label className="col-span-3">
-            <span className="text-black1 font-medium">Password</span>
+        <div className="grid grid-rows-2 md:grid-rows-1 md:grid-cols-12 md:my-8 items-center">
+          <label className="md:col-span-3">
+            <span className="text-black1 text-sm font-medium">Password</span>
           </label>
-          <label className="col-span-7">
+          <label className="md:col-span-7">
             <input type="password" placeholder="Password" className="input input-bordered border-gray1 w-full" />
           </label>
         </div>
 
         <div className="grid grid-cols-12 my-8">
           <span className="col-span-6"></span>
-          <button className="col-span-2 text-gray1">Back</button>
-          <button className="btn bg-orange1 text-white hover:bg-orange1 col-span-2">Login</button>
+          <button className="col-span-3 md:col-span-2 text-gray1">Back</button>
+          <button className="btn bg-orange1 text-white hover:bg-orange1 col-span-3 md:col-span-2">Login</button>
         </div>
       </div>
 
       <div className="flex mt-12">
-        <h1 className="font-bold text-black1 text-5xl text-right">
+        <h1 className="font-bold text-black1 text-4xl lg:text-5xl text-right">
           Find the perfect place{" "}
           <span className="text-orange1">for you </span>
           and <span className="text-hijau1">your land needs</span>.
         </h1>
       </div>
 
-      <svg className="w-screen absolute bottom-0 overflow-hidden" viewBox="0 -45 1440 390" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <animated.svg style={{...anim}} className="w-screen absolute bottom-0 overflow-hidden" viewBox="0 -45 1440 390" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_5_27)">
         <path d="M843.32 150.593C842.979 150.999 842.814 151.524 842.86 152.052L842.962 153.22L833 154.092C832.471 154.138 831.983 154.392 831.642 154.798C831.301 155.205 831.136 155.73 831.182 156.258L831.53 160.243C831.577 160.771 831.831 161.26 832.237 161.601C832.644 161.942 833.169 162.107 833.697 162.061L843.659 161.19L843.833 163.182L834.868 163.966C834.558 163.993 834.26 164.092 833.995 164.255C833.73 164.417 833.507 164.639 833.343 164.903L831.627 167.663C831.513 167.847 831.462 168.062 831.48 168.278C831.499 168.493 831.588 168.697 831.732 168.858L833.901 171.278C834.108 171.51 834.367 171.689 834.655 171.803C834.944 171.918 835.256 171.963 835.565 171.936L844.531 171.151L845.402 181.113L849.387 180.765L848.515 170.803L858.477 169.931C859.006 169.885 859.494 169.631 859.835 169.224C860.176 168.818 860.342 168.293 860.295 167.765L859.947 163.78C859.901 163.251 859.646 162.763 859.24 162.422C858.834 162.081 858.308 161.916 857.78 161.962L847.818 162.833L847.644 160.841L856.61 160.057C856.919 160.029 857.218 159.931 857.482 159.768C857.747 159.606 857.97 159.384 858.134 159.12L859.85 156.36C859.964 156.176 860.016 155.96 859.997 155.745C859.978 155.529 859.89 155.326 859.745 155.165L857.576 152.744C857.369 152.513 857.111 152.333 856.822 152.219C856.533 152.105 856.222 152.06 855.912 152.087L846.947 152.871L846.844 151.704C846.81 151.31 846.659 150.935 846.412 150.627C846.164 150.318 845.831 150.09 845.453 149.971C845.076 149.852 844.672 149.848 844.293 149.958C843.913 150.069 843.574 150.29 843.32 150.593Z" fill="#FF6500"/>
         </g>
@@ -95,9 +105,7 @@ const Login = () => {
         <rect width="36" height="36" fill="white" transform="translate(-19 200)"/>
         </clipPath>
         </defs>
-      </svg>
-
-
+      </animated.svg>
     </div>
   );
 };
