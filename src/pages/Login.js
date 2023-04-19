@@ -11,9 +11,9 @@ const Login = () => {
   })
 
   return (
-    <div className="grid grid-rows-2 md:grid-cols-2 w-screen h-screen fixed z-50 bg-white
+    <div className="grid grid-rows-2 md:grid-cols-2 w-screen h-screen fixed z-40 bg-white top-0 md:mt-0
     px-8 md:px-16 xl:px-32 
-    pt-8 md:pt-32 
+    pt-24 md:pt-32 
     pb-8 md:pb-0">
       <div className="w-full ">
         <h1 className="font-bold text-black1 text-3xl md:text-4xl">Login</h1>
@@ -27,13 +27,35 @@ const Login = () => {
           </label>
         </div>
 
-        <div className="grid grid-rows-2 md:grid-rows-1 md:grid-cols-12 md:my-8 items-center">
+        <div className="grid grid-rows-2 md:grid-rows-1 md:grid-cols-12 md:mt-8 md:mb-4 items-center">
           <label className="md:col-span-3">
             <span className="text-black1 text-sm md:text-base font-medium">Password</span>
           </label>
           <label className="md:col-span-7">
             <input type="password" placeholder="Password" className="input input-bordered border-gray1 w-full" />
           </label>
+        </div>
+
+        <div className="grid grid-cols-12 my-4 items-center">
+          <div className="col-span-4">
+            <hr />
+          </div>
+          <div className="col-span-4 grid place-items-center md:col-span-2">
+            OR
+          </div>
+          <div className="col-span-4">
+            <hr />
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-12 my-4 items-center ">
+          <div className="col-span-10 bg-primary py-4 px-4 rounded-lg flex justify-center items-center relative">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-google absolute left-0 ml-5" viewBox="0 0 16 16">
+              <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+            </svg>
+
+            <h1 className="font-semibold text-white text-md col-span-3">Sign In With Google</h1>
+          </div>
         </div>
 
         <div className="grid grid-cols-12 my-8">
@@ -43,8 +65,8 @@ const Login = () => {
         </div>
       </div>
 
-      <div className="flex mt-12">
-        <h1 className="font-bold text-black1 text-4xl lg:text-5xl text-right">
+      <div className="flex mt-32">
+        <h1 className="font-bold text-black1 text-3xl md:text-4xl lg:text-5xl text-right">
           Find the perfect place{" "}
           <span className="text-orange1">for you </span>
           and <span className="text-hijau1">your land needs</span>.
