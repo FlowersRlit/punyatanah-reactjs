@@ -12,6 +12,9 @@ function App() {
   return (
     <div className="App bg-white font-poppins">
       <Navbar />
+      <br />
+      <br />
+      <br />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/marketplace" element={<MarketplaceMain/>} />
