@@ -30,7 +30,6 @@ const Navbar = () => {
 	}
 
 	useEffect(() => {
-		console.log(prevYPos);
 		const handleScroll = () => {
 			const currentYPos = window.pageYOffset;
 			if (prevYPos > currentYPos || currentYPos < 10) {
@@ -54,7 +53,7 @@ const Navbar = () => {
 	};
 
 	return (
-		<animated.div style={{...springs}} className={`bg-white fixed top-0 w-full z-50 bg-white`}>
+		<animated.div style={{...springs}} className={`bg-white fixed top-0 w-full z-50 bg-white ${prevYPos > 20 ? 'shadow-md': ''}`}>
 			<div className="mx-auto max-w-6xl px-4">
 				<div className="grid grid-cols-2 md:grid-cols-4">
 					<div className="flex space-x-4">
