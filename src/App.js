@@ -4,9 +4,9 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import DetailsItem from "./pages/marketplace/children/DetailsItem";
-import Marketplace from "./pages/marketplace/Marketplace";
-import MarketplaceMain from "./pages/marketplace/Main/MarketplaceMain";
+import DetailsItem from "./pages/Marketplace/children/DetailsItem";
+import Marketplace from "./pages/Marketplace/Marketplace";
+import MarketplaceMain from "./pages/Marketplace/Main/MarketplaceMain";
 
 function App() {
   return (
