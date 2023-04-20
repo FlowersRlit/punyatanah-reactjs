@@ -4,9 +4,9 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import DetailsItem from "./pages/Marketplace/children/DetailsItem";
-import Marketplace from "./pages/Marketplace/Marketplace";
-import MarketplaceMain from "./pages/Marketplace/Main/MarketplaceMain";
+import DetailsItem from "./pages/marketplace/children/DetailsItem";
+import Marketplace from "./pages/marketplace/Marketplace";
+import MarketplaceMain from "./pages/marketplace/Main/MarketplaceMain";
 
 function App() {
   return (
@@ -17,8 +17,8 @@ function App() {
       <br />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/marketplace" element={<MarketplaceMain/>} />
-        <Route path="/marketplace/catalog" element={<Marketplace/>} />
+        <Route path="/marketplace" element={<MarketplaceMain />} />
+        <Route path="/marketplace/catalog" element={<Marketplace />} />
         <Route path="/marketplace/catalog/:id" element={<DetailsItem />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
