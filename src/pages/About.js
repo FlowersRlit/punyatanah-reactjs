@@ -2,6 +2,7 @@ import React from "react";
 import PunyaTanah from "../components/AboutComponents/PunyaTanah";
 import ReactTypingEffect from "react-typing-effect";
 import Review from "../components/AboutComponents/Review";
+import person2 from "../assets/Foto1.webp";
 
 const About = () => {
   return (
@@ -71,7 +72,59 @@ const About = () => {
           <br />
           These are what they said about us:
         </h2>
-        <Review />
+        <div className="flex gap-6 overflow-hidden hover:overflow-auto">
+          <Review
+            picture={person2}
+            as="Customer"
+            user="lorem ipsum"
+            message="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+          />
+          <Review
+            picture={person2}
+            user="lorem ipsum"
+            message="Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur."
+          />
+          <Review
+            picture={person2}
+            user="lorem ipsum"
+            message="Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur."
+          />
+          <Review
+            picture={person2}
+            user="lorem ipsum"
+            message="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+          />
+          <Review
+            picture={person2}
+            user="lorem ipsum"
+            message="Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur."
+          />
+          <Review
+            picture={person2}
+            user="lorem ipsum"
+            message="Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur."
+          />
+        </div>
       </div>
     </div>
   );
