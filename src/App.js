@@ -8,6 +8,7 @@ import DetailsItem from "./pages/Marketplace/children/DetailsItem";
 import Marketplace from "./pages/Marketplace/Marketplace";
 import MarketplaceMain from "./pages/Marketplace/Main/MarketplaceMain";
 import SellTanah from "./components/MarketComponents/FormPages/SellTanah";
+import About from "./pages/About";
 function App() {
   return (
     <div className="App bg-white font-poppins">
@@ -20,6 +21,7 @@ function App() {
         <Route path="/marketplace" element={<MarketplaceMain />} />
         <Route path="/marketplace/catalog" element={<Marketplace />} />
         <Route path="/marketplace/catalog/:id" element={<DetailsItem />} />
+        <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/sell" element={<SellTanah />} />
