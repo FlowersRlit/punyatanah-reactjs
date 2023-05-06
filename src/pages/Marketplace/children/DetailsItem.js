@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Comment from "../../../components/ChildDetails/Comment";
-import Description from "../../../components/ChildDetails/Description";
-import SideRow from "../../../components/ChildDetails/SideRow";
-import PictureCarousel from "../../../components/ChildDetails/PictureCarousel";
-import Rating from "../../../components/ChildDetails/Rating";
-import OwnerCard from "../../../components/ChildDetails/OwnerCard";
-import SpesefikasiTanah from "../../../components/ChildDetails/SpesifikasiTanah";
+import Comment from "../../../components/childdetails/Comment";
+import Description from "../../../components/childdetails/Description";
+import SideRow from "../../../components/childdetails/SideRow";
+import PictureCarousel from "../../../components/childdetails/PictureCarousel";
+import Rating from "../../../components/childdetails/Rating";
+import OwnerCard from "../../../components/childdetails/OwnerCard";
+import SpesefikasiTanah from "../../../components/childdetails/SpesifikasiTanah";
 import data from "../../../data";
 import { useParams } from "react-router-dom";
 

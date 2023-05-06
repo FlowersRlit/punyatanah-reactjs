@@ -1,19 +1,59 @@
 import React from "react";
-import { useRef } from "react";
+import { useRef , useEffect , useState} from "react";
 import { NavLink } from "react-router-dom";
 import NavbarMidButtons from "./MiscComponents/NavbarMidButtons";
 import NavbarMobileButtons from "./MiscComponents/NavbarMobileButtons";
 import Logo from "../assets/navbar.svg";
+import { useSpring, animated } from "@react-spring/web";
 
 const Navbar = () => {
+	const [prevYPos, setPrevYPos] = useState(window.pageYOffset);
+
+	const [springs, api] = useSpring(() => ({
+		from: { x: 0 },
+	}))
+
+	const onScrollUp = () => {
+		api.start({
+			to: {
+				y: 0,
+			},
+		})
+	}
+
+	const onScrollDown = () => {
+		api.start({
+			to: {
+				y: -100,
+			},
+		})
+	}
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const currentYPos = window.pageYOffset;
+			if (prevYPos > currentYPos || currentYPos < 10) {
+				onScrollUp()
+			} else onScrollDown();
+
+			setPrevYPos(currentYPos);
+		};
+	
+		window.addEventListener('scroll', handleScroll);
+	
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, [prevYPos]);
+
+
 	const menu = useRef(null);
+
 
 	const handleClick = () => {
 		menu.current.classList.toggle("hidden");
 	};
 
 	return (
-		<div className="bg-white">
+		<animated.div style={{...springs}} className={`bg-white fixed top-0 w-full z-50 bg-white ${prevYPos > 20 ? 'shadow-md': ''}`}>
 			<div className="mx-auto max-w-6xl px-4">
 				<div className="grid grid-cols-2 md:grid-cols-4">
 					<div className="flex space-x-4">
@@ -81,7 +121,7 @@ const Navbar = () => {
 				<NavbarMobileButtons Title="Review" Page="./" />
 				<NavbarMobileButtons Title="About Us" Page="./" />
 			</div>
-		</div>
+		</animated.div>
 	);
 };
 

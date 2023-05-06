@@ -18,7 +18,7 @@ const MarketplacePreview = () => {
           <NavLink
             to="./marketplace"
             className="my-3 mr-5 rounded-md border-2 border-hijau1 py-3 px-6 font-medium text-hijau1 transition-all duration-200 hover:scale-105">
-            Browse The Marketplace
+            <button>Browse The Marketplace</button> 
           </NavLink>
         </div>
 

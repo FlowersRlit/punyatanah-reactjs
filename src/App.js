@@ -11,10 +11,13 @@ function App() {
   return (
     <div className="App bg-white font-poppins">
       <Navbar />
+      <br />
+      <br />
+      <br />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/marketplace" element={<MarketplaceMain/>} />
-        <Route path="/marketplace/catalog" element={<Marketplace/>} />
+        <Route path="/marketplace" element={<MarketplaceMain />} />
+        <Route path="/marketplace/catalog" element={<Marketplace />} />
         <Route path="/marketplace/catalog/:id" element={<DetailsItem />} />
         <Route path="/member/:todo" element={ <LoginRegister /> } />
       </Routes>
