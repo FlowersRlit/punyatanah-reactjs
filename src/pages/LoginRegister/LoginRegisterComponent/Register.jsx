@@ -5,7 +5,7 @@ const Register = () => {
   const navigate = useNavigate();
   return (
     <div className="w-full py-12">
-      <h1 className="font-bold text-black1 text-4xl">Register</h1>
+      <h1 className="font-bold text-4xl">Register</h1>
 
       <br />
 

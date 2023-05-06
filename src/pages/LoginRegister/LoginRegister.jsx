@@ -8,7 +8,7 @@ const LoginRegister = () => {
     const navigate = useNavigate();
     
     return (
-        <div className={` absolute top-0 grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 w-full relative px-8 pb-24 md:px-16`}>
+        <div className={`h-screen grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 w-full relative px-8 pb-24 md:px-16`}>
         
         {
             todo ===  "login" ? <Login /> : ( todo === "register" ? <Register /> : navigate('/'))

@@ -10,9 +10,9 @@ body{
     overflow-x: hidden;
 }
 
-.step::before, .step::after{
+/* .step::before, .step::after{
     @apply bg-gray1;
-}
+} */
 
 .select, .btn{
     min-height: 2.5rem;
