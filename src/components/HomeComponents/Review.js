@@ -3,7 +3,7 @@ import React from "react";
 const Review = ({ picture, user, message, as }) => {
   return (
     <div>
-      <div className="px-25 my-16 max-h-96 w-[460px] rounded-xl border-2 border-hijau1 shadow-lg">
+      <div className="px-25 my-16 max-h-96 w-[460px] rounded-md border-2 border-hijau1 shadow-lg">
         <div className="mx-10 my-5 flex flex-row gap-8">
           <div className="h-28 w-28 overflow-hidden rounded-full border-4 border-orange1 bg-white shadow-xl">
             <img
