@@ -4,7 +4,7 @@ import Tags from "./Tags";
 export default function CardMarketplace(props) {
   return (
     <Link
-      to="/marketplace/1"
+      to="/marketplace/catalog/1"
       className="h-full w-full cursor-pointer p-1 hover:scale-105">
       <div
         className="grid h-full grid-cols-4 
