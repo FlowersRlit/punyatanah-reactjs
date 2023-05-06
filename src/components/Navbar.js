@@ -36,13 +36,13 @@ const Navbar = () => {
 					{/* sign in & sign up */}
 					<div className="hidden items-center justify-end space-x-1 md:flex">
 						<NavLink
-							to="./login"
+							to="./member/login"
 							className="py-2 px-3 font-medium text-[#016450] hover:text-[#FF6500]"
 						>
 							Sign In
 						</NavLink>
 						<NavLink
-							to="./register"
+							to="./member/register"
 							className="rounded-md border-[#016450] bg-[#016450] py-2 px-3 font-medium text-white hover:bg-[#FF6500] hover:text-white"
 						>
 							Sign Up
