@@ -15,11 +15,13 @@ const MarketplacePreview = () => {
             Explore <span className="text-hijau1">of Thousands</span>.
           </h2>
           {/* sub-tagline */}
-          <NavLink
-            to="./marketplace"
-            className="my-3 mr-5 rounded-md border-2 border-hijau1 py-3 px-6 font-medium text-hijau1 transition-all duration-200 hover:scale-105">
-            <button>Browse The Marketplace</button> 
-          </NavLink>
+          <div className="mt-8">
+            <NavLink
+              to="./marketplace"
+              className="my-10 mr-5 rounded-md border-2 border-hijau1 py-3 px-6 font-medium text-hijau1 hover:bg-hijau1 hover:text-white">
+              Browse The Marketplace
+            </NavLink>
+          </div>
         </div>
 
         {/* cards */}
