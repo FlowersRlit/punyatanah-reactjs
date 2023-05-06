@@ -4,6 +4,7 @@ import MarketplacePreview from "../components/HomeComponents/MarketplacePreview"
 import Review from "../components/HomeComponents/Review";
 import person2 from "../assets/ankara-4940331_960_720.jpg";
 import ReactTypingEffect from "react-typing-effect";
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -84,7 +85,20 @@ const Home = () => {
           />
         </div>
       </div>
+      <div className="py-20">
+        <h2 className="py-5 text-center text-5xl font-bold text-black1">
+          So, <span className="text-hijau1">what are you waiting for?</span>
+        </h2>
+        <div className="mb-20 flex justify-center">
+          <NavLink
+            className="rounded-md border-2 border-orange1 py-5 px-10 text-xl font-semibold text-orange1 hover:bg-orange1 hover:text-white hover:shadow-xl"
+            to="./">
+            Sell my land now.
+          </NavLink>
+        </div>
+      </div>
     </>
+    // create form to sell land
   );
 };
 
