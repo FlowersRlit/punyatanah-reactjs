@@ -71,7 +71,6 @@ const Navbar = () => {
           <div className="col-span-2 hidden items-center justify-center space-x-1 font-medium md:flex">
             <NavbarMidButtons Button="Home" Page="./" />
             <NavbarMidButtons Button="Marketplace" Page="./marketplace" />
-            <NavbarMidButtons Button="Review" Page="./" />
             <NavbarMidButtons Button="About Us" Page="./about" />
           </div>
 
@@ -116,7 +115,6 @@ const Navbar = () => {
         className="mobile-menu hidden text-center shadow-md shadow-[#016450] md:hidden">
         <NavbarMobileButtons Title="Home" Page="./" />
         <NavbarMobileButtons Title="Marketplace" Page="./marketplace" />
-        <NavbarMobileButtons Title="Review" Page="./" />
         <NavbarMobileButtons Title="About Us" Page="./" />
       </div>
     </animated.div>
