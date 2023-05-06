@@ -20,7 +20,6 @@ function App() {
         <Route path="/marketplace" element={<MarketplaceMain />} />
         <Route path="/marketplace/catalog" element={<Marketplace />} />
         <Route path="/marketplace/catalog/:id" element={<DetailsItem />} />
-        <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/sell" element={<SellTanah />} />
