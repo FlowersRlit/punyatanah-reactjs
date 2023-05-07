@@ -7,7 +7,8 @@ const Headline = () => {
       {/* grey background */}
       <div className="absolute h-[40rem] w-[100%] flex-auto bg-[#212121]/10 py-4 md:my-2 md:h-[18rem] lg:my-3 lg:h-[22rem] xl:my-6 xl:h-[30rem] 2xl:h-[35rem]"></div>
       <div className="container mx-auto mt-16 flex justify-between">
-        <div className="relative my-auto justify-evenly">
+        {/* unfinished mobile responsive */}
+        <div className="container relative my-auto justify-evenly">
           {/* headlne */}
           <h1 className="relative max-w-xl pb-4 font-bold leading-[100px] text-black1 sm:text-lg md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
             Find the perfect place{" "}
@@ -58,7 +59,7 @@ const Headline = () => {
           <img
             src={LandingPhoto}
             alt="landing"
-            className="invisible mr-0 mb-6 rounded-2xl object-cover shadow-xl shadow-gray1 md:visible"
+            className="invisible mr-0 mb-6 rounded-2xl object-cover shadow-xl shadow-gray1 lg:visible"
           />
         </div>
       </div>
