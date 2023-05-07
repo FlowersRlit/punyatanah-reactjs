@@ -22,8 +22,6 @@ function App() {
         <Route path="/marketplace/catalog/:id" element={<DetailsItem />} />
         <Route path="/member/:todo" element={ <LoginRegister /> } />
         <Route path="/about" element={<About />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
         <Route path="/sell" element={<SellTanah />} />
       </Routes>
       <Footer />
