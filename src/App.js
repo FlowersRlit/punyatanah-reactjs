@@ -3,11 +3,11 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import DetailsItem from "./pages/Marketplace/MarketplaceDetails/DetailsItem";
-import Marketplace from "./pages/Marketplace/MarketplaceCatalog/Marketplace";
 import LoginRegister from "./pages/LoginRegister/LoginRegister";
 import MarketplaceSearch from "./pages/Marketplace/MarketplaceSearch/MarketplaceSearch";
 import SellTanah from "./components/MarketComponents/FormPages/SellTanah";
 import About from "./pages/About";
+import MarketplaceCatalog from "./pages/Marketplace/MarketplaceCatalog/MarketplaceCatalog";
 function App() {
   return (
     <div className="App bg-white font-poppins">
@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/marketplace" element={<MarketplaceSearch />} />
-        <Route path="/marketplace/catalog" element={<Marketplace />} />
+        <Route path="/marketplace/catalog" element={<MarketplaceCatalog />} />
         <Route path="/marketplace/catalog/:id" element={<DetailsItem />} />
         <Route path="/member/:todo" element={ <LoginRegister /> } />
         <Route path="/about" element={<About />} />

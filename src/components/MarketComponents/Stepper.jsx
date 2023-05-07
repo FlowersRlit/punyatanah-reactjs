@@ -1,5 +1,5 @@
 
-import { Fragment , useState } from "react";
+import { Fragment , useEffect, useState } from "react";
 import Alerts from "../Alerts/Alert";
 
 export default function Stepper(props) {
@@ -35,7 +35,7 @@ export default function Stepper(props) {
                 })
             }
             
-            <Alerts visible={warning} setVisible={setWarning} message={'Pilih Satu Provinsi'} type={warning}/>
+            <Alerts visible={warning} setVisible={setWarning} message={instruksi[props.choosingState-1]} type={warning}/>
         </div>
     )
 }

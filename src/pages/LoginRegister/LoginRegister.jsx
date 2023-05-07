@@ -2,24 +2,24 @@ import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSpring, animated } from '@react-spring/web'
 
-import Login from "./LoginRegisterComponent/Login";
-import Register from "./LoginRegisterComponent/Register";
+import Login from "../../components/LoginRegisterComponent/Login";
+import Register from "../../components/LoginRegisterComponent/Register";
 
 const LoginRegister = () => {
     let { todo } = useParams();
     const navigate = useNavigate();
 
     const anim = useSpring({
-        from: { opacity: 0 , y: 0 },
+        from: { opacity: 0 , y: 10 },
         to: { opacity: 0.25 , y: 0 },
-        delay: 100
+        delay: 400
     })
     
     return (
         <div className="min-h-[92.5vh] relative">
             <div className="flex flex-col md:flex-row relative
             w-screen 
-            md:px-12 xl:px-32
+            md:px-8 xl:px-36
             md:gap-x-4 xl:gap-x-8
             pt-6
             pb-8 md:pb-0" style={{zIndex : 1}}>

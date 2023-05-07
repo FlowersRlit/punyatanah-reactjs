@@ -3,7 +3,7 @@ import CardMarketplace from "../../../components/MarketComponents/CardMarketplac
 import FilterMarketplace from "../../../components/MarketComponents/FilterMarketplace";
 import Data from "../../../data";
 
-export default function Marketplace() {
+export default function MarketplaceCatalog() {
   const [data, setData] = useState(Data);
   const [currPage, setCurrPage] = useState(1);
 
