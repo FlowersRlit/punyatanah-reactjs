@@ -24,7 +24,7 @@ const Navbar = () => {
 	const onScrollDown = () => {
 		api.start({
 			to: {
-				y: -100,
+				y: -250,
 			},
 		})
 	}
