@@ -21,7 +21,6 @@ const Navbar = () => {
     });
   };
 
-<<<<<<< HEAD
 	const onScrollDown = () => {
 		api.start({
 			to: {
@@ -29,15 +28,6 @@ const Navbar = () => {
 			},
 		})
 	}
-=======
-  const onScrollDown = () => {
-    api.start({
-      to: {
-        y: -100,
-      },
-    });
-  };
->>>>>>> master
 
   useEffect(() => {
     const handleScroll = () => {
