@@ -6,7 +6,6 @@ import DetailsItem from "./pages/Marketplace/MarketplaceDetails/DetailsItem";
 import Marketplace from "./pages/Marketplace/MarketplaceCatalog/Marketplace";
 import LoginRegister from "./pages/LoginRegister/LoginRegister";
 import MarketplaceSearch from "./pages/Marketplace/MarketplaceSearch/MarketplaceSearch";
-import Marketplace from "./pages/Marketplace/Marketplace";
 import SellTanah from "./components/MarketComponents/FormPages/SellTanah";
 import About from "./pages/About";
 function App() {
