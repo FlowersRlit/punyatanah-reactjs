@@ -44,7 +44,7 @@ function SearchBar(){
 
 
 
-export default function MarketplaceMain(){
+export default function MarketplaceSearch(){
     const navigate = useNavigate()
     // const [chosenProv, setChosenProv] = useState({
     //     'Aceh': false,

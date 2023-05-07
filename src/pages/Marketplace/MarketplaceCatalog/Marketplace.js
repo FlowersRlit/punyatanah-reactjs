@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import CardMarketplace from "../../components/MarketComponents/CardMarketplace";
-import FilterMarketplace from "../../components/MarketComponents/FilterMarketplace";
-import Data from "../../data";
+import CardMarketplace from "../../../components/MarketComponents/CardMarketplace";
+import FilterMarketplace from "../../../components/MarketComponents/FilterMarketplace";
+import Data from "../../../data";
 
 export default function Marketplace() {
   const [data, setData] = useState(Data);
