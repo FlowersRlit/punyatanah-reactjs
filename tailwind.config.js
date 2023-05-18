@@ -16,6 +16,9 @@ module.exports = {
         center: true,
         padding: "1rem",
       },
+      height: {
+        'layar' : '100vh',
+      },
     },
   },
   plugins: [require("daisyui")],
