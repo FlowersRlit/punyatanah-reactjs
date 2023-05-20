@@ -1,7 +1,26 @@
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import UrlConstant from "../../../shared/urlConstant";
 
 const Login = () => {
   const navigate = useNavigate();
+  const [loginData, setLoginData] = useState({});
+
+  const DataChangeHandler = (value, target) => {
+    setLoginData(() => {
+      let prevData = loginData;
+      prevData[target] = value;
+      return prevData;
+    })
+  }
+
+  const onSubmit = () => {
+    axios.post(UrlConstant.Login, loginData)
+        .then(response => alert(response.status == 200 ? 'Successfully login' : 'Failed To login'))
+        .catch(err => alert(err.message))
+        .finally(() => navigate('/'))
+  }
 
   return (
     <div className="w-full text-black">
@@ -16,6 +35,7 @@ const Login = () => {
             type="text"
             placeholder="username@email.com"
             className="input-bordered input w-full border-gray1"
+            onChange={(event) => DataChangeHandler(event.target.value, 'email')}
           />
         </label>
       </div>
@@ -29,6 +49,8 @@ const Login = () => {
             type="password"
             placeholder="Password"
             className="input-bordered input w-full border-gray1"
+            onChange={(event) => DataChangeHandler(event.target.value, 'password')}
+
           />
         </label>
       </div>
@@ -71,7 +93,8 @@ const Login = () => {
           }}>
           Back
         </button>
-        <button className="btn border-white bg-orange1 text-white hover:bg-orange1 lg:col-span-3">
+        <button className="btn border-white bg-orange1 text-white hover:bg-orange1 lg:col-span-3"
+        onClick={()=> onSubmit()}>
           Login
         </button>
       </div>

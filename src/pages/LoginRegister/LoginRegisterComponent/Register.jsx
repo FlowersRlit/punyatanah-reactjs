@@ -14,8 +14,6 @@ const Register = () => {
       prevData[target] = value;
       return prevData;
     })
-
-    console.log(RegisterData)
   }
 
   const onSubmit = () => {
@@ -23,6 +21,7 @@ const Register = () => {
     axios.post(UrlConstant.Register, RegisterData)
         .then(response => alert(response.status == 201 ? 'Successfully Registered New User' : 'Failed To Register'))
         .catch(err => alert(err.message))
+        .finally(() => navigate('/'))
   }
 
 
