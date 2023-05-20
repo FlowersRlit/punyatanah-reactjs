@@ -45,44 +45,12 @@ function SearchBar(){
 
 
 export default function MarketplaceSearch(){
-    const navigate = useNavigate()
-    // const [chosenProv, setChosenProv] = useState({
-    //     'Aceh': false,
-    //     'KalTim': false,
-    //     'JaBar': false,
-    //     'JaTeng': false,
-    //     'Bengkulu': false,
-    //     'Banten': false,
-    //     'Jakarta': false,
-    //     'KalBar': false,
-    //     'Lampung': false,
-    //     'SumSel': false,
-    //     'BangBel': false,
-    //     'Bali': false,
-    //     'Jatim': false,
-    //     'KalSel': false,
-    //     'NTT': false,
-    //     'SulSel': false,
-    //     'SulBar': false,
-    //     'KepRiau': false,
-    //     'Gorontal': false,
-    //     'Jambi': false,
-    //     'KalTeng': false,
-    //     'IrianJayaBarat': false,
-    //     'SumUt': false,
-    //     'Riau': false,
-    //     'SulUt': false,
-    //     'MalUt': false,
-    //     'SumBar': false,
-    //     'DIY': false,
-    //     'NTB': false,
-    //     'Maluku': false,
-    //     'SulTengg': false,
-    //     'SulTeng': false,
-    //     'Papua': false
-    // });
-
+    const navigate = useNavigate();
     const [choosingState, setChoosingState] = useState(1); // 1-3
+
+    useEffect(() => {
+        if(choosingState == 3) navigate('/marketplace/catalog');
+    }, [choosingState]);
 
     const pages= [
         ({ style }) => 

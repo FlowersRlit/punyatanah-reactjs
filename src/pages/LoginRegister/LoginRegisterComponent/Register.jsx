@@ -1,8 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import UrlConstant from "../../../shared/urlConstant";
 
 const Register = () => {
   const navigate = useNavigate();
+  const [RegisterData, setRegisterData] = useState({});
+  const [confPass, setConfPass] = useState('');
+
+  const DataChangeHandler = (value, target) => {
+    setRegisterData(() => {
+      let prevData = RegisterData;
+      prevData[target] = value;
+      return prevData;
+    })
+
+    console.log(RegisterData)
+  }
+
+  const onSubmit = () => {
+    if(confPass !== RegisterData.password) return alert('Password Doesnt Match');
+    axios.post(UrlConstant.Register, RegisterData)
+        .then(response => alert(response.status == 201 ? 'Successfully Registered New User' : 'Failed To Register'))
+        .catch(err => alert(err.message))
+  }
+
 
   return (
     <div className="w-full text-black">
@@ -17,6 +39,7 @@ const Register = () => {
             type="text"
             placeholder="Full Name"
             className="input-bordered input input-sm w-full border-gray1 py-5"
+            onChange={(event) => DataChangeHandler(event.target.value, 'full_name')}
           />
         </label>
       </div>
@@ -29,6 +52,7 @@ const Register = () => {
           <input
             placeholder="08xxxxxxxx"
             className="input-bordered input input-sm w-full border-gray1 py-5"
+            onChange={(event) => DataChangeHandler(event.target.value, 'phone')}
           />
         </label>
       </div>
@@ -42,6 +66,8 @@ const Register = () => {
             type="text"
             placeholder="username@email.com"
             className="input-bordered input input-sm w-full border-gray1 py-5"
+            onChange={(event) => DataChangeHandler(event.target.value, 'email')}
+
           />
         </label>
       </div>
@@ -54,6 +80,7 @@ const Register = () => {
           <input
             type="password"
             placeholder="Password"
+            onChange={(event) => DataChangeHandler(event.target.value, 'password')}
             className="input-bordered input input-sm w-full border-gray1 py-5"
           />
         </label>
@@ -68,6 +95,7 @@ const Register = () => {
             type="password"
             placeholder="Confirm Password"
             className="input-bordered input input-sm w-full border-gray1 py-5"
+            onChange={(event) => setConfPass(event.target.value)}
           />
         </label>
       </div>
@@ -110,7 +138,8 @@ const Register = () => {
           }}>
           Back
         </button>
-        <button className="btn bg-orange1  text-white hover:bg-orange1 lg:col-span-3">
+        <button className="btn bg-orange1  text-white hover:bg-orange1 lg:col-span-3"
+        onClick={() => {onSubmit()}}>
           Sign Up
         </button>
       </div>
