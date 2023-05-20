@@ -31,57 +31,25 @@ const Home = () => {
           <br />
           These are what they said about us:
         </h2>
-        <div className="flex gap-6 overflow-hidden hover:overflow-auto">
+        {/* review */}
+        <div className="flex gap-6 overflow-hidden hover:overflow-visible">
           <Review
             picture={person2}
             as="Customer"
-            user="lorem ipsum"
-            message="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+            user="Budi Andono"
+            message="Terima kasih kepada PunyaTanah.com sekarang saya punya tanah impian saya setelah bertahun tahun terkena penipuan tanah"
           />
           <Review
             picture={person2}
-            user="lorem ipsum"
-            message="Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur."
+            as="Seller"
+            user="M. Irawan"
+            message="Alhamdulillah tanah saya dapat terjual dengan lebih cepat dan mudah disini"
           />
           <Review
             picture={person2}
-            user="lorem ipsum"
-            message="Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur."
-          />
-          <Review
-            picture={person2}
-            user="lorem ipsum"
-            message="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-          />
-          <Review
-            picture={person2}
-            user="lorem ipsum"
-            message="Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur."
-          />
-          <Review
-            picture={person2}
-            user="lorem ipsum"
-            message="Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur."
+            as="Seller"
+            user="Juna Winata"
+            message="Sudah 2 tahun saya jualan tanah dan aga sulit mendapatkan pelanggan karena tempat saya yang cukup terpencil, tapi setelah menggunakan website ini tanah saya jadi laku terjual semua"
           />
         </div>
       </div>
