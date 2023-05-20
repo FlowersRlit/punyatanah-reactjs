@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Comment from "../../../components/childdetails/Comment";
 import Description from "../../../components/childdetails/Description";
 import SideRow from "../../../components/childdetails/SideRow";
 import PictureCarousel from "../../../components/childdetails/PictureCarousel";
@@ -19,15 +18,13 @@ const DetailsItem = () => {
 
   return (
     <>
-      <div className="container flex p-2 shadow ">
+      <div className="container flex py-20">
         <div className="w-full flex-[3] text-black1">
           <div className="pl-8">
             <p className="text-md mb-2 text-gray1 sm:text-base">
-              HOME/banten/tanggerang kota/tanahpakarto
+              Home / Banten / Tanggerang Kota / Tanah Pak Karto 1 Hektar Medan
             </p>
-            <p className="mb-4 text-xl font-semibold sm:text-3xl">
-              TANAH Pak Karto
-            </p>
+            <p className="mb-6 text-xl font-bold sm:text-4xl">Karto's Land</p>
           </div>
           <div className="pl-8">
             <PictureCarousel />
@@ -35,17 +32,14 @@ const DetailsItem = () => {
           <div className="pt-4 pl-4">
             <Rating />
           </div>
-          <div>
+          <div className="py-2">
             <Description />
           </div>
-          <div>
+          <div className="py-2">
             <SpesefikasiTanah />
           </div>
-          <div className="w-full border-b pl-8 pb-20">
+          <div className="w-full border-b py-2 pl-8">
             <OwnerCard />
-          </div>
-          <div>
-            <Comment />
           </div>
         </div>
         <div className="flex-1 pl-20">
